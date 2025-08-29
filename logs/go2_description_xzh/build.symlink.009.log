@@ -1,0 +1,13 @@
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/pkgconfig/go2_description_xzh.pc
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/go2_description_xzh/cmake/go2_description_xzhConfig-version.cmake
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/go2_description_xzh/cmake/go2_description_xzhConfig.cmake
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/go2_description_xzh/cmake.lock, /home/wang/Zihao/rl_sar/devel/./cmake.lock)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/go2_description_xzh/lib/pkgconfig/go2_description_xzh.pc, /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/go2_description_xzh.pc)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/go2_description_xzh/share/go2_description_xzh/cmake/go2_description_xzhConfig-version.cmake, /home/wang/Zihao/rl_sar/devel/share/go2_description_xzh/cmake/go2_description_xzhConfig-version.cmake)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/go2_description_xzh/share/go2_description_xzh/cmake/go2_description_xzhConfig.cmake, /home/wang/Zihao/rl_sar/devel/share/go2_description_xzh/cmake/go2_description_xzhConfig.cmake)
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/go2_description_xzh.pc
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/go2_description_xzh/cmake/go2_description_xzhConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/go2_description_xzh/cmake/go2_description_xzhConfig.cmake
+Already unlinked: {}

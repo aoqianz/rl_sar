@@ -1,0 +1,13 @@
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/pkgconfig/b2_description.pc
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/b2_description/cmake/b2_descriptionConfig.cmake
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/b2_description/cmake/b2_descriptionConfig-version.cmake
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/b2_description/cmake.lock, /home/wang/Zihao/rl_sar/devel/./cmake.lock)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/b2_description/lib/pkgconfig/b2_description.pc, /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/b2_description.pc)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/b2_description/share/b2_description/cmake/b2_descriptionConfig-version.cmake, /home/wang/Zihao/rl_sar/devel/share/b2_description/cmake/b2_descriptionConfig-version.cmake)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/b2_description/share/b2_description/cmake/b2_descriptionConfig.cmake, /home/wang/Zihao/rl_sar/devel/share/b2_description/cmake/b2_descriptionConfig.cmake)
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/b2_description.pc
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/b2_description/cmake/b2_descriptionConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/b2_description/cmake/b2_descriptionConfig.cmake
+Already unlinked: {}

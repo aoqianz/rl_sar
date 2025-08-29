@@ -1,0 +1,6 @@
+[ 15%] Built target tf_relay
+[ 38%] Built target rl_sdk
+[ 53%] Built target observation_buffer
+[ 69%] Built target rl_real_a1
+[ 84%] Built target rl_sim
+[100%] Built target rl_real_go2

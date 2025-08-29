@@ -1,0 +1,63 @@
+<launch>
+    <arg name="server" default="192.168.31.99" />
+
+    <!-- 使用vrpn_client_ros获取optitrack数据 -->
+    <node pkg="vrpn_client_ros" type="vrpn_client_node" name="vrpn_client_node" output="screen">
+        <rosparam subst_value="true">
+            server: $(arg server)
+            port: 3883
+
+            update_frequency: 100.0
+            frame_id: world
+
+            # Use the VRPN server's time, or the client's ROS time.
+            use_server_time: false
+            broadcast_tf: true
+
+            # Must either specify refresh frequency > 0.0, or a list of trackers to create
+            refresh_tracker_frequency: 1.0
+            #trackers:
+            #- FirstTracker
+            #- SecondTracker
+        </rosparam>
+    </node>
+
+    <!-- <node pkg="rl_sar" type="tf_relay" name="tf_relay" output="screen" /> -->
+
+    <!-- <group ns="dog">
+        <param name="tf_prefix" value="dog" />
+        <param name="robot_description"
+            command="xacro /home/wang/Zihao/rl_sar/src/robots/go2_description_xzh/urdf/go2_xzh.urdf" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    </group> -->
+
+    <!-- 设置TF前缀为"stick" -->
+    <group ns="stick">
+        <!-- 设置TF前缀为"stick" -->
+        <param name="tf_prefix" value="stick" />
+        <!-- 加载棒球的URDF模型 -->
+        <param name="robot_description"
+            command="xacro /home/wang/Zihao/rl_sar/src/robots/go2_description_xzh/urdf/stickball_xzh.urdf" />
+        <!-- 启动机器人状态发布器 -->
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    </group>
+
+    <!-- 设置 mesh 路径 -->
+    <param name="robot_description_path" value="$(find rl_sar)/../robots/go2_description_xzh/dae"/>
+    
+    <!-- 使用正确的 URDF 路径 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find rl_sar)/../robots/go2_description_xzh/urdf/go2.urdf"/>
+    <param name="urdf_path" type="string" value="$(find rl_sar)/../robots/go2_description_xzh/urdf/go2.urdf"/>
+    
+    <!-- 启动 RViz -->
+    <node name="rviz" pkg="rviz" type="rviz" 
+          args="-d $(find rl_sar)/rviz/bbox_visualization.rviz">
+        <!-- 设置 mesh 资源路径 -->
+        <param name="resource_path" value="$(find rl_sar)/../robots/go2_description_xzh/dae"/>
+    </node>
+
+    <node pkg="rl_sar" type="rl_real_go2" name="rl_real_go2" output="screen">
+        <rosparam command="load" file="$(find rl_sar)/models/go2_xzh/config.yaml"/>
+    </node>
+
+</launch>

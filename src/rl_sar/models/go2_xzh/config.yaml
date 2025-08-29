@@ -1,0 +1,89 @@
+go2_xzh:
+    # xzh
+    model_name: "policy_0418_4.pt"
+    framework: "isaacgym"
+    rows: 4
+    cols: 3
+    dt: 0.005 # Matches sim.dt in first file
+    decimation: 4 # Matches control.decimation in first file
+    num_observations: 56 # Updated to match env.num_observations 51 for mode 1, 53 for mode 2
+    # xzh
+    observations:
+        [
+            # "lin_vel",mode
+            # "acc_body",
+            "ang_vel_body",
+            "gravity_vec",
+            "commands",
+            "dof_pos",
+            "dof_vel",
+            "actions",
+            # "zone_center",
+            # "zone_radius",
+            # "reaction_time",
+            # "ball_positions",
+            # "ball_radius",
+            # "ball_velocities",
+            # "base_pos",
+            # "oobb",
+            # "zone_active",
+            # "zone_pre_active"
+        ]
+    observations_history: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    # observations_history: []
+    clip_obs: 100.0
+    clip_actions_lower: [ -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100 ]
+    clip_actions_upper: [ 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100 ]
+    rl_kp: [ 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 ]
+    rl_kd: [ 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5 ]
+    # rl_kd: [ 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0 ]
+    fixed_kp: [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
+    fixed_kd: [ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
+    hip_scale_reduction: 1.0
+    hip_scale_reduction_indices: [ 0, 3, 6, 9 ]
+    num_of_dofs: 12
+    wheel_indices: []
+
+    action_scale: 0.1  # 0.25
+    action_scale_wheel: 0.0
+    acc_body_scale: 2.0
+    lin_vel_scale: 2.0
+    ang_vel_scale: 0.25
+    dof_pos_scale: 1.0
+    dof_vel_scale: 0.05
+    commands_scale: [ 2.0, 2.0, 0.25 ]
+    torque_limits: [ 23.7, 23.7, 33.5, 23.7, 23.7, 33.5, 23.7, 23.7, 33.5, 23.7, 23.7, 33.5 ]
+    # torque_limits: [ 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5 ]
+    default_dof_pos:
+        [
+            # FL_hip, FL_thigh, FL_calf
+            0.1000,
+            0.8000,
+            -1.5,
+            # FR_hip, FR_thigh, FR_calf
+            -0.1,
+            0.8000,
+            -1.5,
+            # RL_hip, RL_thigh, RL_calf
+            0.1000,
+            1.0000,
+            -1.5,
+            # RR_hip, RR_thigh, RR_calf
+            -0.1,
+            1.0000,
+            -1.5
+        ]
+    joint_controller_names: [ "FL_hip_controller", "FL_thigh_controller", "FL_calf_controller", "FR_hip_controller", "FR_thigh_controller", "FR_calf_controller", "RL_hip_controller", "RL_thigh_controller", "RL_calf_controller", "RR_hip_controller", "RR_thigh_controller", "RR_calf_controller" ]
+    optitrack: false
+    stick: false
+    zone_center: [ 0.2, 0.0, 0.22 ]
+    zone_radius: 0.8
+    bounding_sphere: false
+    bounding_sphere_radius: 0.5
+    reaction_time: 1.0
+    zone_activation_time: 2.0
+
+    # mujoco_base_pos: 0 0 0.3
+    # oobb: -1.0
+    # zone_active: false
+    # zone_pre_active: false

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="stickball_xzh">
+  <link
+    name="stick_body">
+    <inertial>
+      <origin
+        xyz="0.347065780830855 -2.70787872210112E-19 -3.9291250927203E-35"
+        rpy="0 0 0" />
+      <mass
+        value="0.61762064039848" />
+      <inertia
+        ixx="2.92940081527368E-05"
+        ixy="1.79708823088946E-21"
+        ixz="-1.43917128414163E-35"
+        iyy="0.0354614193651485"
+        iyz="-1.36298139357343E-37"
+        izz="0.0354614193651485" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="stick_head_ball">
+    <inertial>
+      <origin
+        xyz="5.19643505166867E-05 3.03969491068531E-22 6.93583094531337E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.114557495975606" />
+      <inertia
+        ixx="4.1527256053655E-05"
+        ixy="2.82063956635855E-25"
+        ixz="3.94007747179246E-24"
+        iyy="4.12881487960702E-05"
+        iyz="-5.45852425435264E-41"
+        izz="4.12881487960702E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_head_ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_head_ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stick_head_ball"
+    type="fixed">
+    <origin
+      xyz="0.885895651857754 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="stick_body" />
+    <child
+      link="stick_head_ball" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="stick_ball_1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00104310693576224" />
+      <inertia
+        ixx="1.62985458712849E-08"
+        ixy="0"
+        ixz="0"
+        iyy="1.62985458712849E-08"
+        iyz="0"
+        izz="1.62985458712849E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_ball_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_ball_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stick_ball_1"
+    type="fixed">
+    <origin
+      xyz="0.68 0 0.016"
+      rpy="0 0 0" />
+    <parent
+      link="stick_body" />
+    <child
+      link="stick_ball_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="stick_ball_2">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00104310693576224" />
+      <inertia
+        ixx="1.62985458712849E-08"
+        ixy="0"
+        ixz="0"
+        iyy="1.62985458712849E-08"
+        iyz="0"
+        izz="1.62985458712849E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_ball_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_ball_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stick_ball_2"
+    type="fixed">
+    <origin
+      xyz="0.5266 0 0.0163"
+      rpy="0 0 0" />
+    <parent
+      link="stick_body" />
+    <child
+      link="stick_ball_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="stick_ball_3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00104310693576224" />
+      <inertia
+        ixx="1.62985458712849E-08"
+        ixy="0"
+        ixz="0"
+        iyy="1.62985458712849E-08"
+        iyz="0"
+        izz="1.62985458712849E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_ball_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_ball_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stick_ball_3"
+    type="fixed">
+    <origin
+      xyz="0.368 0 0.0186"
+      rpy="0 0 -1.5707963267949" />
+    <parent
+      link="stick_body" />
+    <child
+      link="stick_ball_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="stick_ball_4">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 -1.11072424304039E-19 -3.22643766658739E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.0149803448996452" />
+      <inertia
+        ixx="1.38652917309722E-06"
+        ixy="-3.01649547244518E-39"
+        ixz="7.72539718477324E-24"
+        iyy="1.38126512596821E-06"
+        iyz="-2.12311408476253E-40"
+        izz="1.38126512596821E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_ball_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../dae/stick_ball_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stick_ball_4"
+    type="fixed">
+    <origin
+      xyz="0.930560589701841 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="stick_body" />
+    <child
+      link="stick_ball_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

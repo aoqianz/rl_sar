@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 设置 mesh 路径 -->
+    <param name="robot_description_path" value="$(find rl_sar)/../robots/go2_description_xzh/dae"/>
+    
+    <!-- 使用正确的 URDF 路径 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find rl_sar)/../robots/go2_description_xzh/urdf/go2.urdf"/>
+    <param name="urdf_path" type="string" value="$(find rl_sar)/../robots/go2_description_xzh/urdf/go2.urdf"/>
+    
+    <!-- 启动 RViz -->
+    <node name="rviz" pkg="rviz" type="rviz" 
+          args="-d $(find rl_sar)/rviz/bbox_visualization.rviz">
+        <!-- 设置 mesh 资源路径 -->
+        <param name="resource_path" value="$(find rl_sar)/../robots/go2_description_xzh/dae"/>
+    </node>
+    
+    <!-- 启动主节点，添加参数加载 -->
+    <node name="rl_real_go2" pkg="rl_sar" type="rl_real_go2" output="screen">
+        <rosparam command="load" file="$(find rl_sar)/models/go2_xzh/config.yaml"/>
+    </node>
+</launch> 

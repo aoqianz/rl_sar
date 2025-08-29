@@ -1,0 +1,17 @@
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/librobot_joint_controller.so
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/pkgconfig/robot_joint_controller.pc
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/robot_joint_controller/cmake/robot_joint_controllerConfig-version.cmake
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/robot_joint_controller/cmake/robot_joint_controllerConfig.cmake
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/robot_joint_controller/cmake.lock, /home/wang/Zihao/rl_sar/devel/./cmake.lock)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/robot_joint_controller/lib/librobot_joint_controller.so, /home/wang/Zihao/rl_sar/devel/lib/librobot_joint_controller.so)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/robot_joint_controller/lib/pkgconfig/robot_joint_controller.pc, /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/robot_joint_controller.pc)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/robot_joint_controller/share/robot_joint_controller/cmake/robot_joint_controllerConfig-version.cmake, /home/wang/Zihao/rl_sar/devel/share/robot_joint_controller/cmake/robot_joint_controllerConfig-version.cmake)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/robot_joint_controller/share/robot_joint_controller/cmake/robot_joint_controllerConfig.cmake, /home/wang/Zihao/rl_sar/devel/share/robot_joint_controller/cmake/robot_joint_controllerConfig.cmake)
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/librobot_joint_controller.so
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/robot_joint_controller.pc
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/robot_joint_controller/cmake/robot_joint_controllerConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/robot_joint_controller/cmake/robot_joint_controllerConfig.cmake
+Already unlinked: {}

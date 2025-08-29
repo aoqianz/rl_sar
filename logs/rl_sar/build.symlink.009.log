@@ -1,0 +1,49 @@
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/librl_sdk.so
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/libobservation_buffer.so
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/pkgconfig/rl_sar.pc
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/rl_sar/rl_real_go2
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/rl_sar/rl_sim
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/rl_sar/rl_sim.py
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/rl_sar/cmake.lock
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/rl_sar/tf_relay
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/rl_sar/rl_real_a1
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/rl_sar/actuator_net.py
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/rl_sar/cmake/rl_sarConfig-version.cmake
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/rl_sar/cmake/rl_sarConfig.cmake
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/cmake.lock, /home/wang/Zihao/rl_sar/devel/./cmake.lock)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/libobservation_buffer.so, /home/wang/Zihao/rl_sar/devel/lib/libobservation_buffer.so)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/librl_sdk.so, /home/wang/Zihao/rl_sar/devel/lib/librl_sdk.so)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/pkgconfig/rl_sar.pc, /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/rl_sar.pc)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/rl_sar/actuator_net.py, /home/wang/Zihao/rl_sar/devel/lib/rl_sar/actuator_net.py)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/rl_sar/rl_real_a1, /home/wang/Zihao/rl_sar/devel/lib/rl_sar/rl_real_a1)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/rl_sar/tf_relay, /home/wang/Zihao/rl_sar/devel/lib/rl_sar/tf_relay)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/rl_sar/rl_real_go2, /home/wang/Zihao/rl_sar/devel/lib/rl_sar/rl_real_go2)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/rl_sar/cmake.lock, /home/wang/Zihao/rl_sar/devel/lib/rl_sar/cmake.lock)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/rl_sar/rl_sim.py, /home/wang/Zihao/rl_sar/devel/lib/rl_sar/rl_sim.py)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/rl_sar/rl_sim, /home/wang/Zihao/rl_sar/devel/lib/rl_sar/rl_sim)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/share/rl_sar/cmake/rl_sarConfig-version.cmake, /home/wang/Zihao/rl_sar/devel/share/rl_sar/cmake/rl_sarConfig-version.cmake)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/rl_sar/share/rl_sar/cmake/rl_sarConfig.cmake, /home/wang/Zihao/rl_sar/devel/share/rl_sar/cmake/rl_sarConfig.cmake)
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/libobservation_buffer.so
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/librl_sdk.so
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/rl_sar.pc
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/rl_sar/actuator_net.py
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/rl_sar/rl_real_a1
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/rl_sar/tf_relay
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/rl_sar/rl_real_go2
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/rl_sar/cmake.lock
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/rl_sar/rl_sim.py
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/rl_sar/rl_sim
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/rl_sar/cmake/rl_sarConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/rl_sar/cmake/rl_sarConfig.cmake
+Already unlinked: {}

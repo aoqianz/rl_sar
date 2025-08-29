@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target robot_joint_controller[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_joint_controller.dir/src/robot_joint_controller.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/aoqian/rl_sar_xzh/devel/.private/robot_joint_controller/lib/librobot_joint_controller.so[0m
+[100%] Built target robot_joint_controller

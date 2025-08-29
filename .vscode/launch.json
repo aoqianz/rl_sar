@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "ROS: Launch",
+            "type": "ros",
+            "request": "launch",
+            "target": "/home/wang/Zihao/rl_sar/src/rl_sar/launch/debug.launch"
+            // "target": "/home/wang/Zihao/rl_sar/src/rl_sar/launch/run.launch"
+        },
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+Symlinking /home/aoqian/rl_sar_xzh/devel/lib/pkgconfig/a1_description.pc
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/a1_description/cmake/a1_descriptionConfig.cmake
+Symlinking /home/aoqian/rl_sar_xzh/devel/share/a1_description/cmake/a1_descriptionConfig-version.cmake
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/a1_description/cmake.lock, /home/wang/Zihao/rl_sar/devel/./cmake.lock)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/a1_description/lib/pkgconfig/a1_description.pc, /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/a1_description.pc)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/a1_description/share/a1_description/cmake/a1_descriptionConfig-version.cmake, /home/wang/Zihao/rl_sar/devel/share/a1_description/cmake/a1_descriptionConfig-version.cmake)
+Cleaning: (/home/wang/Zihao/rl_sar/devel/.private/a1_description/share/a1_description/cmake/a1_descriptionConfig.cmake, /home/wang/Zihao/rl_sar/devel/share/a1_description/cmake/a1_descriptionConfig.cmake)
+Unlinking: /home/wang/Zihao/rl_sar/devel/lib/pkgconfig/a1_description.pc
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/a1_description/cmake/a1_descriptionConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/wang/Zihao/rl_sar/devel/share/a1_description/cmake/a1_descriptionConfig.cmake
+Already unlinked: {}

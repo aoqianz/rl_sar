@@ -1,0 +1,8 @@
+[ 15%] Built target tf_relay
+[ 30%] Built target observation_buffer
+[ 53%] Built target rl_sdk
+[ 69%] Built target rl_real_a1
+[ 84%] Built target rl_sim
+[ 92%] [32mBuilding CXX object CMakeFiles/rl_real_go2.dir/src/rl_real_go2.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/wang/Zihao/rl_sar/devel/.private/rl_sar/lib/rl_sar/rl_real_go2[0m
+[100%] Built target rl_real_go2

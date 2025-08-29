@@ -1,0 +1,272 @@
+link_names:
+  - FL_calf
+  - FL_calflower
+  - FL_calflower1
+  - FL_foot
+  - FL_hip
+  - FL_thigh
+  - FR_calf
+  - FR_calflower
+  - FR_calflower1
+  - FR_foot
+  - FR_hip
+  - FR_thigh
+  - Head_lower
+  - Head_upper
+  - RL_calf
+  - RL_calflower
+  - RL_calflower1
+  - RL_foot
+  - RL_hip
+  - RL_thigh
+  - RR_calf
+  - RR_calflower
+  - RR_calflower1
+  - RR_foot
+  - RR_hip
+  - RR_thigh
+  - base
+box_configs:
+  - link_name: FL_calf
+    size:
+      - 0.024
+      - 0.024
+      - 0.12
+    offset:
+      - 0.008
+      - 0
+      - -0.06
+  - link_name: FL_calflower
+    size:
+      - 0.022
+      - 0.022
+      - 0.065
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: FL_calflower1
+    size:
+      - 0.031
+      - 0.031
+      - 0.03
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: FL_foot
+    size:
+      - 0.044
+      - 0.044
+      - 0.044
+    offset:
+      - -0.002
+      - 0
+      - 0
+  - link_name: FL_hip
+    size:
+      - 0.092
+      - 0.092
+      - 0.04
+    offset:
+      - 0
+      - 0.08
+      - 0
+  - link_name: FL_thigh
+    size:
+      - 0.213
+      - 0.0245
+      - 0.034
+    offset:
+      - 0
+      - 0
+      - -0.1065
+  - link_name: FR_calf
+    size:
+      - 0.026
+      - 0.026
+      - 0.12
+    offset:
+      - 0.01
+      - 0
+      - -0.06
+  - link_name: FR_calflower
+    size:
+      - 0.022
+      - 0.022
+      - 0.065
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: FR_calflower1
+    size:
+      - 0.031
+      - 0.031
+      - 0.03
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: FR_foot
+    size:
+      - 0.044
+      - 0.044
+      - 0.044
+    offset:
+      - -0.002
+      - 0
+      - 0
+  - link_name: FR_hip
+    size:
+      - 0.092
+      - 0.092
+      - 0.04
+    offset:
+      - 0
+      - -0.08
+      - 0
+  - link_name: FR_thigh
+    size:
+      - 0.213
+      - 0.0245
+      - 0.034
+    offset:
+      - 0
+      - 0
+      - -0.1065
+  - link_name: Head_lower
+    size:
+      - 0.094
+      - 0.094
+      - 0.094
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: Head_upper
+    size:
+      - 0.1
+      - 0.1
+      - 0.09
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: RL_calf
+    size:
+      - 0.026
+      - 0.026
+      - 0.12
+    offset:
+      - 0.01
+      - 0
+      - -0.06
+  - link_name: RL_calflower
+    size:
+      - 0.022
+      - 0.022
+      - 0.065
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: RL_calflower1
+    size:
+      - 0.031
+      - 0.031
+      - 0.03
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: RL_foot
+    size:
+      - 0.044
+      - 0.044
+      - 0.044
+    offset:
+      - -0.002
+      - 0
+      - 0
+  - link_name: RL_hip
+    size:
+      - 0.092
+      - 0.092
+      - 0.04
+    offset:
+      - 0
+      - 0.08
+      - 0
+  - link_name: RL_thigh
+    size:
+      - 0.213
+      - 0.0245
+      - 0.034
+    offset:
+      - 0
+      - 0
+      - -0.1065
+  - link_name: RR_calf
+    size:
+      - 0.026
+      - 0.026
+      - 0.12
+    offset:
+      - 0.01
+      - 0
+      - -0.06
+  - link_name: RR_calflower
+    size:
+      - 0.022
+      - 0.022
+      - 0.065
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: RR_calflower1
+    size:
+      - 0.031
+      - 0.031
+      - 0.03
+    offset:
+      - 0
+      - 0
+      - 0
+  - link_name: RR_foot
+    size:
+      - 0.044
+      - 0.044
+      - 0.044
+    offset:
+      - -0.002
+      - 0
+      - 0
+  - link_name: RR_hip
+    size:
+      - 0.092
+      - 0.092
+      - 0.04
+    offset:
+      - 0
+      - -0.08
+      - 0
+  - link_name: RR_thigh
+    size:
+      - 0.213
+      - 0.0245
+      - 0.034
+    offset:
+      - 0
+      - 0
+      - -0.1065
+  - link_name: base
+    size:
+      - 0.3762
+      - 0.0935
+      - 0.114
+    offset:
+      - 0
+      - 0
+      - 0

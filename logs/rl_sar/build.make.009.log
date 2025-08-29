@@ -1,0 +1,25 @@
+[35m[1mScanning dependencies of target rl_sdk[0m
+[35m[1mScanning dependencies of target tf_relay[0m
+[35m[1mScanning dependencies of target observation_buffer[0m
+[  7%] [32mBuilding CXX object CMakeFiles/tf_relay.dir/src/tf_relay.cpp.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/observation_buffer.dir/library/observation_buffer/observation_buffer.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/rl_sdk.dir/library/rl_sdk/rl_sdk.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/rl_sdk.dir/library/rl_sdk/bbox.cpp.o[0m
+[ 38%] [32m[1mLinking CXX executable /home/aoqian/rl_sar_xzh/devel/.private/rl_sar/lib/rl_sar/tf_relay[0m
+[ 38%] Built target tf_relay
+[ 46%] [32m[1mLinking CXX shared library /home/aoqian/rl_sar_xzh/devel/.private/rl_sar/lib/libobservation_buffer.so[0m
+[ 46%] Built target observation_buffer
+[ 53%] [32m[1mLinking CXX shared library /home/aoqian/rl_sar_xzh/devel/.private/rl_sar/lib/librl_sdk.so[0m
+[ 53%] Built target rl_sdk
+[35m[1mScanning dependencies of target rl_real_go2[0m
+[35m[1mScanning dependencies of target rl_real_a1[0m
+[35m[1mScanning dependencies of target rl_sim[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/rl_sim.dir/src/rl_sim.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/rl_real_a1.dir/src/rl_real_a1.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/rl_real_go2.dir/src/rl_real_go2.cpp.o[0m
+[ 84%] [32m[1mLinking CXX executable /home/aoqian/rl_sar_xzh/devel/.private/rl_sar/lib/rl_sar/rl_real_a1[0m
+[ 84%] Built target rl_real_a1
+[ 92%] [32m[1mLinking CXX executable /home/aoqian/rl_sar_xzh/devel/.private/rl_sar/lib/rl_sar/rl_sim[0m
+[ 92%] Built target rl_sim
+[100%] [32m[1mLinking CXX executable /home/aoqian/rl_sar_xzh/devel/.private/rl_sar/lib/rl_sar/rl_real_go2[0m
+[100%] Built target rl_real_go2
