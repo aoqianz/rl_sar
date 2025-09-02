@@ -1,23 +1,26 @@
 go2_xzh:
     # xzh
-    model_name: "policy_0418_4.pt"
+    model_name: "velocity.pt"
     framework: "isaacgym"
     rows: 4
     cols: 3
     dt: 0.005 # Matches sim.dt in first file
     decimation: 4 # Matches control.decimation in first file
-    num_observations: 56 # Updated to match env.num_observations 51 for mode 1, 53 for mode 2
+    num_observations: 46 # Updated to match env.num_observations 51 for mode 1, 53 for mode 2
     # xzh
     observations:
         [
             # "lin_vel",mode
             # "acc_body",
-            "ang_vel_body",
+            # "ang_vel_body",
             "gravity_vec",
-            "commands",
+            "ang_vel_body",
+            # "commands",
             "dof_pos",
             "dof_vel",
             "actions",
+            "commands",
+            "compliance"
             # "zone_center",
             # "zone_radius",
             # "reaction_time",
@@ -29,13 +32,14 @@ go2_xzh:
             # "zone_active",
             # "zone_pre_active"
         ]
-    observations_history: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    # observations_history: [19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    observations_history: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     # observations_history: []
     clip_obs: 100.0
     clip_actions_lower: [ -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100 ]
     clip_actions_upper: [ 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100 ]
-    rl_kp: [ 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 ]
-    rl_kd: [ 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5 ]
+    rl_kp: [ 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 ]
+    rl_kd: [ 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ]
     # rl_kd: [ 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0 ]
     fixed_kp: [ 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 ]
     fixed_kd: [ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
@@ -44,14 +48,15 @@ go2_xzh:
     num_of_dofs: 12
     wheel_indices: []
 
-    action_scale: 0.1  # 0.25
+    action_scale: 0.10  # 0.25
     action_scale_wheel: 0.0
-    acc_body_scale: 2.0
-    lin_vel_scale: 2.0
-    ang_vel_scale: 0.25
+    acc_body_scale: 1.0
+    lin_vel_scale: 1.0
+    ang_vel_scale: 1.0
     dof_pos_scale: 1.0
-    dof_vel_scale: 0.05
-    commands_scale: [ 2.0, 2.0, 0.25 ]
+    dof_vel_scale: 0.2
+    commands_scale: [ 1., 1., 1. ]
+    compliance_scale: 100
     torque_limits: [ 23.7, 23.7, 33.5, 23.7, 23.7, 33.5, 23.7, 23.7, 33.5, 23.7, 23.7, 33.5 ]
     # torque_limits: [ 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5, 33.5 ]
     default_dof_pos:

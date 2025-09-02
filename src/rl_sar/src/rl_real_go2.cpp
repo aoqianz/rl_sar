@@ -355,7 +355,11 @@ void RL_Real::RunModel()
         double rand_vel_x = lin_vel_x_dist(gen);
         double rand_vel_y = lin_vel_y_dist(gen);
         double rand_heading = heading_dist(gen);
-        this->obs.commands = torch::tensor({{rand_vel_x, rand_vel_y, rand_heading}});
+        double vel_x = 0;
+        double vel_y = 0;
+        double ang_z = 0; // placeholder for compliance value
+        // this->obs.commands = torch::tensor({{rand_vel_x, rand_vel_y, rand_heading}});
+        this->obs.commands = torch::tensor({{vel_x, vel_y, ang_z}});
         
 
         // this->obs.commands = torch::tensor({{this->joystick.ly(), -this->joystick.rx(), -this->joystick.lx()}});
@@ -383,6 +387,8 @@ void RL_Real::RunModel()
         this->obs.ball_radius = torch::tensor(this->barrier_state.ball_state.zone_radius).unsqueeze(0);
         // OptiTrack
         this->obs.base_pos = torch::tensor(this->robot_state.body_state.pos).unsqueeze(0); 
+        // compliance
+        this->obs.compliance = torch::tensor(this->params.compliance).unsqueeze(0).unsqueeze(0);
 
 
 
@@ -446,6 +452,7 @@ torch::Tensor RL_Real::Forward()
         this->history_obs_buf.insert(clamped_obs);
         // 获取指定长度的观测历史向量
         this->history_obs = this->history_obs_buf.get_obs_vec(this->params.observations_history);
+        std::cout << "history_obs size: " << this->history_obs.sizes() << std::endl;
         // 使用历史观测进行前向传播，获取动作
         actions = this->model.forward({this->history_obs}).toTensor();
     }
@@ -664,7 +671,7 @@ int main(int argc, char **argv)
 
     if (SIM_OR_REAL) 
     {
-        // mujocu
+        // mujoco
         std::string networkInterface = "lo";
         ChannelFactory::Instance()->Init(1, networkInterface);
         std::cout << "simulation mode!" << std::endl;

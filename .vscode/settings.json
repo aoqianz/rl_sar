@@ -82,7 +82,11 @@
         "hash_map": "cpp",
         "hash_set": "cpp",
         "unordered_set": "cpp",
-        "codecvt": "cpp"
+        "codecvt": "cpp",
+        "rope": "cpp",
+        "slist": "cpp",
+        "any": "cpp",
+        "span": "cpp"
     },
     "python.autoComplete.extraPaths": [
         "/home/wang/Zihao/rl_sar/devel/lib/python3/dist-packages",

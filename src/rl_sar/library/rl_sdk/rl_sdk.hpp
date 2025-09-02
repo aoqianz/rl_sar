@@ -181,6 +181,7 @@ struct ModelParams
     double ang_vel_scale;
     double dof_pos_scale;
     double dof_vel_scale;
+    double compliance_scale;
 
     double clip_obs;
     torch::Tensor clip_actions_upper;
@@ -207,6 +208,9 @@ struct ModelParams
     // bool zone_active;
     // bool zone_pre_active;
     double zone_activation_time;
+
+    // compliance
+    double compliance;
 
     // oobb
     std::vector<double> zone_center;
@@ -237,6 +241,7 @@ struct Observations
     torch::Tensor oobb; // 1 球和狗boundingbox是否碰撞
     torch::Tensor zone_active; // 1 禁区是否激活
     torch::Tensor zone_pre_active; // 1 狗是否激活
+    torch::Tensor compliance; // 1 柔顺性
 };
 
 

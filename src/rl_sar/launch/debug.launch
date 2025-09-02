@@ -1,5 +1,4 @@
 <launch>
-    <node pkg="rl_sar" type="rl_real_go2" name="rl_real_go2">
-
+    <node pkg="rl_sar" type="rl_real_go2" name="rl_real_go2" output="screen">
     </node>
 </launch>

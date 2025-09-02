@@ -38,7 +38,9 @@ torch::Tensor RL::ComputeObservation()
         # self.ball_velocities,  # 3 观测禁区球速度 (vx, vy, vz), 暂时没加
     ), dim=-1) */
     std::vector<torch::Tensor> obs_list;
-
+    // pritn params.observations
+    std::cout<<"打印11111111111111111111111111111111111111"<<std::endl;
+    std::cout << this->params.observations << std::endl;
     for (const std::string &observation : this->params.observations)
     {
 
@@ -49,37 +51,37 @@ torch::Tensor RL::ComputeObservation()
             In some real robots like Unitree, if the coordinate system for the angular velocity is already in the body coordinate system, no transformation is necessary.
             Forgetting to perform the transformation or performing it multiple times may cause controller crashes when the rotation reaches 180 degrees.
         */
-        if (observation == "lin_vel")
+        // if (observation == "lin_vel")
+        // {
+        //     obs_list.push_back(this->obs.lin_vel * this->params.lin_vel_scale);
+        // }
+        // else if (observation == "acc_body")
+        // {
+        //     obs_list.push_back(this->obs.acc_body * this->params.acc_body_scale);
+        // }
+        // else if (observation == "ang_vel_body")
+        // {
+        //     obs_list.push_back(this->obs.ang_vel * this->params.ang_vel_scale);
+        // }
+        // else if (observation == "ang_vel_world") // 没用
+        // {
+        //     obs_list.push_back(this->QuatRotateInverse(this->obs.base_quat, this->obs.ang_vel, this->params.framework) * this->params.ang_vel_scale);
+        // }
+        if (observation == "gravity_vec")
         {
-            obs_list.push_back(this->obs.lin_vel * this->params.lin_vel_scale);
-        }
-        else if (observation == "acc_body")
-        {
-            obs_list.push_back(this->obs.acc_body * this->params.acc_body_scale);
+            obs_list.push_back(this->QuatRotateInverse(this->obs.base_quat, this->obs.gravity_vec, this->params.framework));
         }
         else if (observation == "ang_vel_body")
         {
             obs_list.push_back(this->obs.ang_vel * this->params.ang_vel_scale);
         }
-        else if (observation == "ang_vel_world") // 没用
-        {
-            obs_list.push_back(this->QuatRotateInverse(this->obs.base_quat, this->obs.ang_vel, this->params.framework) * this->params.ang_vel_scale);
-        }
-        else if (observation == "gravity_vec")
-        {
-            obs_list.push_back(this->QuatRotateInverse(this->obs.base_quat, this->obs.gravity_vec, this->params.framework));
-        }
-        else if (observation == "commands")
-        {
-            obs_list.push_back(this->obs.commands * this->params.commands_scale);
-        }
         else if (observation == "dof_pos")
         {
             torch::Tensor dof_pos_rel = this->obs.dof_pos - this->params.default_dof_pos;
-            for (int i : this->params.wheel_indices)
-            {
-                dof_pos_rel[0][i] = 0.0;
-            }
+            // for (int i : this->params.wheel_indices)
+            // {
+            //     dof_pos_rel[0][i] = 0.0;
+            // }
             obs_list.push_back(dof_pos_rel * this->params.dof_pos_scale);
         }
         else if (observation == "dof_vel")
@@ -90,46 +92,54 @@ torch::Tensor RL::ComputeObservation()
         {
             obs_list.push_back(this->obs.actions);
         }
-        else if (observation == "ball_positions")
+        else if (observation == "commands")
         {
-            obs_list.push_back(this->obs.ball_positions);
+            obs_list.push_back(this->obs.commands * this->params.commands_scale);
         }
-        else if (observation == "ball_radius")
+        else if (observation == "compliance")
         {
-            obs_list.push_back(this->obs.ball_radius.unsqueeze(-1));
+            obs_list.push_back(this->obs.compliance * this->params.compliance_scale);
         }
-        else if (observation == "ball_velocities")
-        {
-            obs_list.push_back(this->obs.ball_velocities);
-        }
-        else if (observation == "zone_center")
-        {
-            obs_list.push_back(this->obs.zone_center);
-        }
-        else if (observation == "zone_radius")
-        {
-            obs_list.push_back(this->obs.zone_radius);
-        }
-        else if (observation == "reaction_time")
-        {
-            obs_list.push_back(this->obs.reaction_time);
-        }
-        else if (observation == "base_pos")
-        {
-            obs_list.push_back(this->obs.base_pos);
-        }
-        else if (observation == "oobb")
-        {
-            obs_list.push_back(this->obs.oobb);
-        }
-        else if (observation == "zone_active")
-        {
-            obs_list.push_back(this->obs.zone_active);
-        }
-        else if (observation == "zone_pre_active")
-        {
-            obs_list.push_back(this->obs.zone_pre_active);
-        }
+        // else if (observation == "ball_positions")
+        // {
+        //     obs_list.push_back(this->obs.ball_positions);
+        // }
+        // else if (observation == "ball_radius")
+        // {
+        //     obs_list.push_back(this->obs.ball_radius.unsqueeze(-1));
+        // }
+        // else if (observation == "ball_velocities")
+        // {
+        //     obs_list.push_back(this->obs.ball_velocities);
+        // }
+        // else if (observation == "zone_center")
+        // {
+        //     obs_list.push_back(this->obs.zone_center);
+        // }
+        // else if (observation == "zone_radius")
+        // {
+        //     obs_list.push_back(this->obs.zone_radius);
+        // }
+        // else if (observation == "reaction_time")
+        // {
+        //     obs_list.push_back(this->obs.reaction_time);
+        // }
+        // else if (observation == "base_pos")
+        // {
+        //     obs_list.push_back(this->obs.base_pos);
+        // }
+        // else if (observation == "oobb")
+        // {
+        //     obs_list.push_back(this->obs.oobb);
+        // }
+        // else if (observation == "zone_active")
+        // {
+        //     obs_list.push_back(this->obs.zone_active);
+        // }
+        // else if (observation == "zone_pre_active")
+        // {
+        //     obs_list.push_back(this->obs.zone_pre_active);
+        // }
     }
 
     torch::Tensor obs = torch::cat(obs_list, 1);
@@ -176,6 +186,7 @@ void RL::InitObservations()
     this->obs.oobb = torch::tensor({{0.0}});
     this->obs.zone_active = torch::tensor({{0.0}});
     this->obs.zone_pre_active = torch::tensor({{0.0}});
+    this->obs.compliance = torch::tensor({{0.02}});
 }
 
 // 初始化输出
